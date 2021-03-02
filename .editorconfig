@@ -1,0 +1,15 @@
+# top-most EditorConfig file
+root = true
+
+# matches all files
+[*]
+indent_style = tab
+indent_size = 4
+insert_final_newline = false
+trim_trailing_whitespace = true
+ij_any_keep_indents_on_empty_lines = false
+
+# only json
+[*.json]
+indent_style = tab
+indent_size = 2

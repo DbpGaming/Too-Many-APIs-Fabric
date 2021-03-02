@@ -1,0 +1,26 @@
+{
+	"extends": "recommended",
+	"rules": {
+		"Indentation": {
+			"enabled": false
+		},
+		"IndentationClosingBraces": {
+			"enabled": false
+		},
+		"IndentationComments": {
+			"enabled": false
+		},
+		"NoTabCharacter": {
+			"enabled": false
+		},
+		"TrailingWhitespace": {
+			"enabled": false
+		},
+		"SpaceBeforeClosingBrace": {
+			"enabled": false
+		},
+		"SpaceBeforeOpeningBrace": {
+			"enabled": false
+		}
+	}
+}

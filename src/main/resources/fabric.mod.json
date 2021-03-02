@@ -1,37 +1,40 @@
 {
-  "schemaVersion": 1,
-  "id": "modid",
-  "version": "${version}",
-
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
-  "authors": [
-    "Me!"
-  ],
-  "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
-  },
-
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
-
-  "environment": "*",
-  "entrypoints": {
-    "main": [
-      "net.fabricmc.example.ExampleMod"
-    ]
-  },
-  "mixins": [
-    "modid.mixins.json"
-  ],
-
-  "depends": {
-    "fabricloader": ">=0.7.4",
-    "fabric": "*",
-    "minecraft": "1.16.x"
-  },
-  "suggests": {
-    "another-mod": "*"
-  }
+	"schemaVersion": 1,
+	"id": "tma",
+	"version": "${version}",
+	"name": "Too Many APIs",
+	"description": "API for larger mods",
+	"authors": [
+		"Dbp"
+	],
+	"contact": {
+		"homepage": "https://github.com/DbpGaming/Too-Many-APIs-Fabric",
+		"sources": "https://github.com/DbpGaming/Too-Many-APIs-Fabric",
+		"issues": "https://github.com/DbpGaming/Too-Many-APIs-Fabric/issues"
+	},
+	"license": "LGPL",
+	"icon": "assets/tma/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dbp.tma.Tma"
+		]
+	},
+	"mixins": [
+		"tma.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.7.4",
+		"minecraft": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	},
+	"custom": {
+		"modmenu": {
+			"links": {
+				"modmenu.discord": "https://discord.gg/H7qDbqgG6p"
+			}
+		}
+	}
 }
