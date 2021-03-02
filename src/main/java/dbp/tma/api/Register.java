@@ -11,6 +11,6 @@ public class Register {
 	public static void registerMaterial(String modid, Data material, Settings settings) {
 		HashSet<String> parts = material.getHashSetSetting("parts"); 
 		String name = material.getStringSetting("name");
-		for (String part : parts) Registry.register(Registry.ITEM, new Identifier(modid, name+"_"+part), new Item(settings));
+		for (String part : parts) Registry.register(Registry.ITEM, new Identifier(modid, part+"/"+name), new Item(settings));
 	}
 }
