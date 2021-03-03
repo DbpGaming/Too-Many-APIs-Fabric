@@ -1,5 +1,6 @@
 package dbp.tma.api;
 
+import java.util.Arrays;
 import java.util.HashSet;
 
 public class Constructor {
@@ -12,6 +13,8 @@ public class Constructor {
 	}
 
 	public static Data Material(String name, int color, String... parts){
-		return Material(name, color, parts);
+		HashSet<String> partthing = new HashSet<>();
+		partthing.addAll(Arrays.asList(parts));
+		return Material(name, color, partthing);
 	}
 }
