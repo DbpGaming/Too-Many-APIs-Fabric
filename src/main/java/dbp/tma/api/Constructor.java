@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 
 public class Constructor {
-	public static Data Material(String name, int color, HashSet parts){
+	public static Data Material(String name, int color, HashSet<String> parts) {
 		Data material = new Data();
 		material.setSetting("name", name);
 		material.setSetting("color", color);
@@ -12,9 +12,7 @@ public class Constructor {
 		return material;
 	}
 
-	public static Data Material(String name, int color, String... parts){
-		HashSet<String> partthing = new HashSet<>();
-		partthing.addAll(Arrays.asList(parts));
-		return Material(name, color, partthing);
+	public static Data Material(String name, int color, String... parts) {
+		return Material(name, color, new HashSet<>(Arrays.asList(parts)));
 	}
 }

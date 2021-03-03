@@ -1,7 +1,5 @@
 package dbp.tma;
 
-import java.util.HashSet;
-
 import dbp.tma.api.Constructor;
 import dbp.tma.api.Register;
 import net.fabricmc.api.ModInitializer;
