@@ -5,8 +5,7 @@ import java.util.HashSet;
 
 public class Constructor {
 	public static Data Material(String name, HashSet parts){
-		Data material = new Data().setSetting("name", name).setSetting("parts", parts);
-		return material;
+		return new Data().setSetting("name", name).setSetting("parts", parts);
 	}
 
 	public static Data Material(String name, String... parts){
