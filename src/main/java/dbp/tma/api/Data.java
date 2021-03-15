@@ -9,20 +9,24 @@ public class Data {
 	protected final HashMap<String, Boolean> settingsBool = new HashMap<>();
 	protected final HashMap<String, HashSet> settingsHashSet = new HashMap<>();
 
-	public void setSetting(String name, String setting) {
+	public Data setSetting(String name, String setting) {
 		this.settingsString.put(name, setting);
+		return this;
 	}
 
-	public void setSetting(String name, int setting) {
+	public Data setSetting(String name, int setting) {
 		this.settingsInt.put(name, setting);
+		return this;
 	}
 
-	public void setSetting(String name, boolean setting) {
+	public Data setSetting(String name, boolean setting) {
 		this.settingsBool.put(name, setting);
+		return this;
 	}
 
-	public void setSetting(String name, HashSet setting) {
+	public Data setSetting(String name, HashSet setting) {
 		this.settingsHashSet.put(name, setting);
+		return this;
 	}
 
 	public String getStringSetting(String name){
