@@ -22,10 +22,7 @@ public class Data {
 	public Data setSetting(String name, Object obj){
 		if (obj.getClass() == String.class) this.settingsString.put(name, (String) obj);
 		if (obj.getClass() == HashSet.class) this.settingsHashSet.put(name, (HashSet<String>) obj);
-		if (obj.getClass() != String.class || obj.getClass() !=  HashSet.class){
-			this.settingsString.put(name, (String) obj.toString());
-			System.out.println(obj.toString() + "unknown object registered as a setting, registering it as a string setting, this may break things");
-		}
+		if (obj.getClass() != String.class && obj.getClass() != HashSet.class) System.out.println(obj.toString() + "unknown object we can't register this so it might break things");
 		return this;
 	}
 
