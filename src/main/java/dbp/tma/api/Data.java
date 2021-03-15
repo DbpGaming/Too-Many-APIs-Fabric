@@ -7,7 +7,7 @@ public class Data {
 	protected final HashMap<String, String> settingsString = new HashMap<>();
 	protected final HashMap<String, Integer> settingsInt = new HashMap<>();
 	protected final HashMap<String, Boolean> settingsBool = new HashMap<>();
-	protected final HashMap<String, HashSet> settingsHashSet = new HashMap<>();
+	protected final HashMap<String, HashSet<String>> settingsHashSet = new HashMap<>();
 
 	public Data setSetting(String name, String setting) {
 		this.settingsString.put(name, setting);
@@ -24,24 +24,24 @@ public class Data {
 		return this;
 	}
 
-	public Data setSetting(String name, HashSet setting) {
+	public Data setSetting(String name, HashSet<String> setting) {
 		this.settingsHashSet.put(name, setting);
 		return this;
 	}
 
-	public String getStringSetting(String name){
+	public String getStringSetting(String name) {
 		return settingsString.get(name);
 	}
 
-	public int getIntSetting(String name){
+	public int getIntSetting(String name) {
 		return settingsInt.get(name);
 	}
 
-	public boolean getBoolSetting(String name){
+	public boolean getBoolSetting(String name) {
 		return settingsBool.get(name);
 	}
 
-	public HashSet getHashSetSetting(String name){
+	public HashSet<String> getHashSetSetting(String name) {
 		return settingsHashSet.get(name);
 	}
 }

@@ -10,8 +10,6 @@ public class Constructor {
 	}
 
 	public static Data Material(String name, String... parts){
-		HashSet<String> partthing = new HashSet<>();
-		partthing.addAll(Arrays.asList(parts));
-		return Material(name, partthing);
+		return Material(name, new HashSet<>(Arrays.asList(parts)));
 	}
 }
