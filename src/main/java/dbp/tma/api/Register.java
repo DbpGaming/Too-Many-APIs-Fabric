@@ -10,6 +10,6 @@ import net.minecraft.util.registry.Registry;
 public class Register {
 	public static void registerMaterial(String modid, Data mat, Settings settings) {
 		HashSet<String> parts = mat.getHashSetSetting("parts"); 
-		for (String part : parts) Registry.register(Registry.ITEM, new Identifier(modid, part+"/"+mat.getStringSetting("name")), new Item(settings));
+		for (String part : parts) Registry.register(Registry.ITEM, new Identifier(modid, part+"_"+mat.getStringSetting("name")), new Item(settings));
 	}
 }

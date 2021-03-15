@@ -9,11 +9,6 @@ public class Data {
 	protected final HashMap<String, Boolean> settingsBool = new HashMap<>();
 	protected final HashMap<String, HashSet<String>> settingsHashSet = new HashMap<>();
 
-	public Data setSetting(String name, String setting) {
-		this.settingsString.put(name, setting);
-		return this;
-	}
-
 	public Data setSetting(String name, int setting) {
 		this.settingsInt.put(name, setting);
 		return this;
@@ -24,8 +19,9 @@ public class Data {
 		return this;
 	}
 
-	public Data setSetting(String name, HashSet<String> setting) {
-		this.settingsHashSet.put(name, setting);
+	public Data setSetting(String name, Object obj){
+		if (obj.getClass() == String.class) this.settingsString.put(name, (String) obj);
+		if (obj.getClass() == HashSet.class) this.settingsHashSet.put(name, (HashSet<String>) obj);
 		return this;
 	}
 
