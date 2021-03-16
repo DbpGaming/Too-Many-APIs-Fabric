@@ -20,9 +20,11 @@ public class Data {
 	}
 
 	public Data setSetting(String name, Object obj){
-		if (obj.getClass() == String.class) this.settingsString.put(name, (String) obj);
-		if (obj.getClass() == HashSet.class) this.settingsHashSet.put(name, (HashSet<String>) obj);
-		if (obj.getClass() != String.class && obj.getClass() != HashSet.class) System.out.println(obj.toString() + "unknown object we can't register this so it might break things");
+		switch(obj.getClass().toString()){
+			case "class java.util.HashSet": this.settingsHashSet.put(name, (HashSet<String>) obj); break;
+			case "class java.lang.String": this.settingsString.put(name, (String) obj); break;
+			default: System.out.println(obj.toString() + "unknown object we can't register this so it might break things");
+		}
 		return this;
 	}
 
