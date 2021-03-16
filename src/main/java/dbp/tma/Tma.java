@@ -8,6 +8,6 @@ import net.minecraft.item.Item.Settings;
 public class Tma implements ModInitializer {
 	@Override
 	public void onInitialize() {
-		Register.registerMaterial("tma", Constructor.Material("copper", "ingot", "nugget"), new Settings());
+		Register.registerMaterial("tma", Constructor.Material("ingot", "nugget").setSetting("name", "copper"), new Settings());
 	}
 }
